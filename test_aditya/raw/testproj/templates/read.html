@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="{% static 'css/read_style.css' %}">
+</head>
+<body>
+    <h1> Enter a symptom inside </h1>
+    {{answer}}
+    <form action="" method="post">{% csrf_token %}
+        <input name="inp1" type="text" placeholder="Enter a symptom">
+        <input name="inp2" type="text" placeholder="Enter a symptom">
+        <input name="inp3" type="text" placeholder="Enter a symptom">
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Home</a>
+</body>
+</html>
